@@ -10,7 +10,7 @@ lib.init()
 class SDL2:
     def __init__(self, size=None):
         if size is None:
-            size = ascii.ASCII().dims
+            size = ascii.ASCII().dims * 8
         self.window = lib.Window('', size=size)
         self.window.show()
         self.renderer = lib.Renderer(self.window)
